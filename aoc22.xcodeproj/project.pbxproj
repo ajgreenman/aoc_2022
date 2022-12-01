@@ -14,6 +14,9 @@
 		D2D0E35529390D2A00CAF201 /* aoc22Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0E35429390D2A00CAF201 /* aoc22Tests.swift */; };
 		D2D0E35F29390D2A00CAF201 /* aoc22UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0E35E29390D2A00CAF201 /* aoc22UITests.swift */; };
 		D2D0E36129390D2A00CAF201 /* aoc22UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0E36029390D2A00CAF201 /* aoc22UITestsLaunchTests.swift */; };
+		D2D0E36E293918F600CAF201 /* day1_input.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2D0E36D293918F600CAF201 /* day1_input.txt */; };
+		D2D0E3A829392B9B00CAF201 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0E3A729392B9B00CAF201 /* FileService.swift */; };
+		D2D0E3BA2939446300CAF201 /* ElfModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0E3B92939446300CAF201 /* ElfModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		D2D0E35A29390D2A00CAF201 /* aoc22UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aoc22UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D0E35E29390D2A00CAF201 /* aoc22UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc22UITests.swift; sourceTree = "<group>"; };
 		D2D0E36029390D2A00CAF201 /* aoc22UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc22UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2D0E36D293918F600CAF201 /* day1_input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day1_input.txt; sourceTree = "<group>"; };
+		D2D0E3A729392B9B00CAF201 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
+		D2D0E3B92939446300CAF201 /* ElfModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElfModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +100,13 @@
 		D2D0E34229390D2600CAF201 /* aoc22 */ = {
 			isa = PBXGroup;
 			children = (
+				D2D0E36D293918F600CAF201 /* day1_input.txt */,
 				D2D0E34329390D2600CAF201 /* aoc22App.swift */,
 				D2D0E34529390D2600CAF201 /* ContentView.swift */,
 				D2D0E34729390D2900CAF201 /* Assets.xcassets */,
 				D2D0E34929390D2900CAF201 /* Preview Content */,
+				D2D0E3A729392B9B00CAF201 /* FileService.swift */,
+				D2D0E3B92939446300CAF201 /* ElfModel.swift */,
 			);
 			path = aoc22;
 			sourceTree = "<group>";
@@ -233,6 +242,7 @@
 			files = (
 				D2D0E34B29390D2900CAF201 /* Preview Assets.xcassets in Resources */,
 				D2D0E34829390D2900CAF201 /* Assets.xcassets in Resources */,
+				D2D0E36E293918F600CAF201 /* day1_input.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D0E34629390D2600CAF201 /* ContentView.swift in Sources */,
+				D2D0E3BA2939446300CAF201 /* ElfModel.swift in Sources */,
 				D2D0E34429390D2600CAF201 /* aoc22App.swift in Sources */,
+				D2D0E3A829392B9B00CAF201 /* FileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

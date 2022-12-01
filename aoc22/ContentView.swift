@@ -9,13 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Button("Calculate", action: calculateHighestTotal)
+    }
+    
+    func calculateHighestTotal() {
+        guard let input = FileService.readFile("day1_input") else {
+            return
         }
-        .padding()
+        var elves = [ElfModel]()
+        var currentElf = ElfModel()
+        input.enumerateLines { value, _ in
+            if let item = Int(value) {
+                currentElf.addItem(item: item)
+            } else {
+                elves.append(currentElf)
+                currentElf = ElfModel()
+            }
+        }
+        let totals = elves.map { $0.total }
+        print(totals.max()!)
     }
 }
 
