@@ -16,8 +16,10 @@ struct ContentView: View {
         guard let input = FileService.readFile("day1_input") else {
             return
         }
+        
         var elves = [ElfModel]()
         var currentElf = ElfModel()
+        
         input.enumerateLines { value, _ in
             if let item = Int(value) {
                 currentElf.addItem(item: item)
@@ -30,7 +32,7 @@ struct ContentView: View {
         let totals = elves.map { $0.total }
             .sorted(by: {$0 > $1})[0..<3]
         
-        print(totals.first)
+        print(totals.first!)
         print(totals.reduce(0, +))
     }
 }
