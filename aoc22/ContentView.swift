@@ -26,8 +26,12 @@ struct ContentView: View {
                 currentElf = ElfModel()
             }
         }
+        
         let totals = elves.map { $0.total }
-        print(totals.max()!)
+            .sorted(by: {$0 > $1})[0..<3]
+        
+        print(totals.first)
+        print(totals.reduce(0, +))
     }
 }
 
