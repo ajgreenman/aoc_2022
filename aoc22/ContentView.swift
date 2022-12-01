@@ -22,7 +22,7 @@ struct ContentView: View {
         
         input.enumerateLines { value, _ in
             if let item = Int(value) {
-                currentElf.addItem(item: item)
+                currentElf.addItem(item)
             } else {
                 elves.append(currentElf)
                 currentElf = ElfModel()

@@ -24,7 +24,7 @@ class ElfModel {
         return "An elf carrying \(total) calories of amounts \(_calories.description)"
     }
     
-    func addItem(item: Int) {
+    func addItem(_ item: Int) {
         _calories.append(item)
     }
 }
