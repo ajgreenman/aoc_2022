@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Button("Calculate", action: calculateHighestTotal)
+        VStack {
+            Button("Day 1", action: day1).padding()
+            Button("Day 2", action: day2).padding()
+        }
     }
     
-    func calculateHighestTotal() {
+    func day1() {
         guard let input = FileService.readFile("day1_input") else {
             return
         }
@@ -20,8 +23,8 @@ struct ContentView: View {
         var elves = [ElfModel]()
         var currentElf = ElfModel()
         
-        input.enumerateLines { value, _ in
-            if let item = Int(value) {
+        input.enumerateLines { line, _ in
+            if let item = Int(line) {
                 currentElf.addItem(item)
             } else {
                 elves.append(currentElf)
@@ -34,6 +37,52 @@ struct ContentView: View {
         
         print(totals.first!)
         print(totals.reduce(0, +))
+    }
+    
+    func day2() {
+        guard let input = FileService.readFile("day2_input") else {
+            return
+        }
+        
+        var score = 0
+        
+        input.enumerateLines { line, _ in
+            let battle = line.components(separatedBy: " ")
+            score += _performBattle(battle[0], battle[1])
+        }
+        
+        print("Score: \(score)")
+    }
+    
+    func _performBattle(_ opponent: String, _ you: String) -> Int {
+        if(opponent == "A") {
+            if(you == "X") {
+                return 4
+            }
+            if(you == "Y") {
+                return 8
+            }
+            return 3
+        }
+        if(opponent == "B") {
+            if(you == "X") {
+                return 1
+            }
+            if(you == "Y") {
+                return 5
+            }
+            return 9
+        }
+        if(opponent == "C") {
+            if(you == "X") {
+                return 7
+            }
+            if(you == "Y") {
+                return 2
+            }
+            return 6
+        }
+        return 0
     }
 }
 
