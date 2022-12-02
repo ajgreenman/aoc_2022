@@ -57,12 +57,12 @@ struct ContentView: View {
     func _performBattle(_ opponent: String, _ you: String) -> Int {
         if(opponent == "A") {
             if(you == "X") {
-                return 4
+                return 3
             }
             if(you == "Y") {
-                return 8
+                return 4
             }
-            return 3
+            return 8
         }
         if(opponent == "B") {
             if(you == "X") {
@@ -75,12 +75,12 @@ struct ContentView: View {
         }
         if(opponent == "C") {
             if(you == "X") {
-                return 7
-            }
-            if(you == "Y") {
                 return 2
             }
-            return 6
+            if(you == "Y") {
+                return 6
+            }
+            return 7
         }
         return 0
     }
