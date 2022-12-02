@@ -73,16 +73,13 @@ struct ContentView: View {
             }
             return 9
         }
-        if(opponent == "C") {
-            if(you == "X") {
-                return 2
-            }
-            if(you == "Y") {
-                return 6
-            }
-            return 7
+        if(you == "X") {
+            return 2
         }
-        return 0
+        if(you == "Y") {
+            return 6
+        }
+        return 7
     }
 }
 
