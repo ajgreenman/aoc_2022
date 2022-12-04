@@ -10,9 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Button("Day 1", action: Day1.solve).padding()
-            Button("Day 2", action: Day2.solve).padding()
-            Button("Day 3", action: Day3.solve).padding()
+            Button("Day 1", action: Day1.solve)
+            Button("Day 2", action: Day2.solve)
+            Button("Day 3", action: Day3.solve)
+            Button("Day 4", action: Day4.solve)
         }
     }
 }
