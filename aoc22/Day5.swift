@@ -8,6 +8,10 @@
 import Foundation
 
 class Day5 {
+    
+    // each crate is 3 characters ("[N]") plus a space for a total of 4
+    static let crateCharacters = 4
+    
     public static func solve() {
         guard let input = FileService.readFile("day5_input") else {
             return
@@ -17,14 +21,32 @@ class Day5 {
             return
         }
         
-        // each crate is 3 characters ("[N]") plus a space for a total of 4
-        // the last crate doesn't have a space so "add" one
-        let numberOfStacks = (firstLine.count + 1) / 4
+        let numberOfStacks = (firstLine.count + 1) / crateCharacters
         
-        let unorganizedCrates = _getCrates(input, numberOfStacks: numberOfStacks)
+        let crates = _readCratesFromInput(input, numberOfStacks)
         
-        _part1(input, unorganizedCrates)
-        _part2(input, unorganizedCrates)
+        _part1(input, crates)
+        _part2(input, crates)
+    }
+    
+    static func _readCratesFromInput(_ input: String, _ count: Int) -> [[Character]] {
+        var stacks = Array(repeating: Array<Character>(), count: count)
+        
+        input.enumerateLines { line, _ in
+            if(line.first == "[") {
+                for i in stride(from: 1, to: line.count - 1, by: crateCharacters) {
+                    let index = line.index(line.startIndex, offsetBy: i)
+                    if(line[index].isLetter) {
+                        stacks[i / crateCharacters].append(line[index])
+                    }
+                }
+            } else {
+                // stop enumerating when there's no more crates
+                return
+            }
+        }
+        
+        return stacks
     }
     
     static func _part1(_ input: String, _ crates: [[Character]]) -> Void {
@@ -69,26 +91,6 @@ class Day5 {
         }
         
         _printTop(crates)
-    }
-    
-    static func _getCrates(_ input: String, numberOfStacks: Int) -> [[Character]] {
-        var stacks = Array(repeating: Array<Character>(), count: numberOfStacks)
-        
-        input.enumerateLines { line, _ in
-            if(line.first == "[") {
-                for i in stride(from: 1, to: line.count - 1, by: 4) {
-                    let index = line.index(line.startIndex, offsetBy: i)
-                    if(line[index].isLetter) {
-                        stacks[i / 4].append(line[index])
-                    }
-                }
-            } else {
-                // stop enumerating when there's no more crates
-                return
-            }
-        }
-        
-        return stacks
     }
     
     static func _printTop(_ crates: [[Character]]) -> Void {
