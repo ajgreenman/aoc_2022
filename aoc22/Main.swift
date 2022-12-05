@@ -14,6 +14,7 @@ struct ContentView: View {
             Button("Day 2", action: Day2.solve)
             Button("Day 3", action: Day3.solve)
             Button("Day 4", action: Day4.solve)
+            Button("Day 5", action: Day5.solve)
         }
     }
 }

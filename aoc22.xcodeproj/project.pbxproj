@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2C997D3293E31F700582889 /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C997D2293E31F700582889 /* Day5.swift */; };
+		D2C997D7293E38F300582889 /* day5_input.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2C997D6293E38F300582889 /* day5_input.txt */; };
+		D2C997D9293E41DB00582889 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C997D8293E41DB00582889 /* StringExtensions.swift */; };
 		D2D0E34429390D2600CAF201 /* aoc22App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0E34329390D2600CAF201 /* aoc22App.swift */; };
 		D2D0E34629390D2600CAF201 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0E34529390D2600CAF201 /* Main.swift */; };
 		D2D0E34829390D2900CAF201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2D0E34729390D2900CAF201 /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2C997D2293E31F700582889 /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
+		D2C997D6293E38F300582889 /* day5_input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day5_input.txt; sourceTree = "<group>"; };
+		D2C997D8293E41DB00582889 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		D2D0E34029390D2600CAF201 /* aoc22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aoc22.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D0E34329390D2600CAF201 /* aoc22App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc22App.swift; sourceTree = "<group>"; };
 		D2D0E34529390D2600CAF201 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 				D2D0E3BB293A56A300CAF201 /* day2_input.txt */,
 				D2D0E3BD293BD31E00CAF201 /* day3_input.txt */,
 				D2D0E3C7293CE37A00CAF201 /* day4_input.txt */,
+				D2C997D6293E38F300582889 /* day5_input.txt */,
 				D2D0E34329390D2600CAF201 /* aoc22App.swift */,
 				D2D0E34529390D2600CAF201 /* Main.swift */,
 				D2D0E34729390D2900CAF201 /* Assets.xcassets */,
@@ -128,6 +135,8 @@
 				D2D0E3C1293BD40900CAF201 /* Day2.swift */,
 				D2D0E3C3293BD4B500CAF201 /* Day3.swift */,
 				D2D0E3C5293CE31B00CAF201 /* Day4.swift */,
+				D2C997D2293E31F700582889 /* Day5.swift */,
+				D2C997D8293E41DB00582889 /* StringExtensions.swift */,
 			);
 			path = aoc22;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 				D2D0E34829390D2900CAF201 /* Assets.xcassets in Resources */,
 				D2D0E3C8293CE37A00CAF201 /* day4_input.txt in Resources */,
 				D2D0E36E293918F600CAF201 /* day1_input.txt in Resources */,
+				D2C997D7293E38F300582889 /* day5_input.txt in Resources */,
 				D2D0E3BC293A56A300CAF201 /* day2_input.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,8 +306,10 @@
 				D2D0E3C2293BD40900CAF201 /* Day2.swift in Sources */,
 				D2D0E3C0293BD3F300CAF201 /* Day1.swift in Sources */,
 				D2D0E3BA2939446300CAF201 /* ElfModel.swift in Sources */,
+				D2C997D9293E41DB00582889 /* StringExtensions.swift in Sources */,
 				D2D0E34429390D2600CAF201 /* aoc22App.swift in Sources */,
 				D2D0E3A829392B9B00CAF201 /* FileService.swift in Sources */,
+				D2C997D3293E31F700582889 /* Day5.swift in Sources */,
 				D2D0E3C6293CE31B00CAF201 /* Day4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
