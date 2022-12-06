@@ -33,9 +33,9 @@ class Day6 {
         for i in sequenceLength ... input.count {
             let start = input.index(input.startIndex, offsetBy: i - sequenceLength)
             let end = input.index(input.startIndex, offsetBy: i - 1)
-            let characters = input[start ... end]
             
-            let letterSet = Set(characters)
+            let letterSet = Set(input[start ... end])
+            
             if(letterSet.count == sequenceLength) {
                 return i
             }
