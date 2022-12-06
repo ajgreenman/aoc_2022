@@ -9,8 +9,10 @@ import Foundation
 
 class Day {
     let day: Int
+    let solver: () -> Void
     
-    init(_ day: Int) {
+    init(_ day: Int, _ solver: @escaping () -> Void) {
         self.day = day
+        self.solver = solver
     }
 }

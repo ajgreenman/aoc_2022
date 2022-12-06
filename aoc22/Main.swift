@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var selectedDay = 0
     var body: some View {
         VStack {
-            Button("Day 1", action: Day1.solve)
-            Button("Day 2", action: Day2.solve)
-            Button("Day 3", action: Day3.solve)
-            Button("Day 4", action: Day4.solve)
-            Button("Day 5", action: Day5.solve)
-            Button("Day 6", action: Day6.solve)
+            Picker("Select day", selection: $selectedDay,
+                   content: {
+                ForEach(days.indices, id: \.self) {
+                    Text("Day \(self.days[$0].day)")
+                }
+            })
+            .padding()
+            .accentColor(.green)
+            Button("Solve", action: self.days[selectedDay].solver)
+                .buttonStyle(.borderedProminent)
+                .accentColor(.green)
         }
     }
+    
+    var days = [
+        Day(1, Day1.solve),
+        Day(2, Day2.solve),
+        Day(3, Day3.solve),
+        Day(4, Day4.solve),
+        Day(5, Day5.solve),
+        Day(6, Day6.solve),
+    ]
 }
 
 struct ContentView_Previews: PreviewProvider {
