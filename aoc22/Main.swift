@@ -32,6 +32,7 @@ struct ContentView: View {
         Day(4, Day4.solve),
         Day(5, Day5.solve),
         Day(6, Day6.solve),
+        Day(7, Day7.solve),
     ]
 }
 
