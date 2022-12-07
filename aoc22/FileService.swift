@@ -73,6 +73,11 @@ class FileService {
     }
 }
 
+struct File {
+    var name: String
+    var size: Int
+}
+
 class Directory {
     var name: String
     weak var parent: Directory?
@@ -120,9 +125,4 @@ class Directory {
             $0.depthFirstTraversal(visit)
         }
     }
-}
-
-struct File {
-    var name: String
-    var size: Int
 }
